@@ -21,3 +21,13 @@ html {
     justify-content: center;
 }
 
+.heading {
+    position: absolute;
+    top: 5rem;
+    font-size: 7rem;
+    font-weight: 300;
+    color: #f03535;
+    letter-spacing: 1rem;
+    text-shadow: 0.2rem 0.2rem 0.5rem #aaa;
+}
+
