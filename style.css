@@ -31,3 +31,25 @@ html {
     text-shadow: 0.2rem 0.2rem 0.5rem #aaa;
 }
 
+.buttons {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons button {
+    width: 10rem;
+    height: 4rem;
+    background-color: #fff;
+    font-size: 2rem;
+    color: #f03535;
+    border: none;
+    border-radius: 5rem;
+    letter-spacing: 0.1rem;
+    box-shadow: 0.3rem 0.3rem 0.8rem #eee;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
