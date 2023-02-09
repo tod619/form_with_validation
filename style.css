@@ -53,9 +53,18 @@ html {
     cursor: pointer;
 }
 
+.form-bg {
+    position: absolute;
+    width: 65rem;
+    height: 65rem;
+    box-shadow: 1.5rem 1.5rem 1.5rem #ddd;
+    transform: rotate(45deg);
+}
+
 .form {
     display: flex;
     flex-direction: column;
+    z-index: 100;
 }
 
 .form-input-wrapper {
