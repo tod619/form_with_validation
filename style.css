@@ -60,6 +60,8 @@ html {
 
 .form-input-wrapper {
     margin: 1.5rem 0;
+    box-shadow: 0.5rem 0.5rem 0.5rem #eee;
+    border-radius: 5rem;
 }
 
 .form input {
@@ -69,8 +71,27 @@ html {
     font-size: 1.7rem;
     padding: 0 2rem;
     letter-spacing: 0.2rem;
+    border: none;
+    border-radius: 5rem;
+}
+
+.form-input {
+    box-shadow: 0.3rem 0.3rem 0.5rem #eee inset;
+    color: #888;
 }
 
 .message {
     display: none;
+}
+
+.form-btn {
+    box-shadow: 0.5rem 0.5rem 1rem #ddd;
+    color: #f03535;
+    margin: 2rem 0;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+}
+
+.form-btn:hover {
+    box-shadow: 0.5rem 0.5rem 2rem #ddd;
 }
