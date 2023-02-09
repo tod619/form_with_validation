@@ -42,7 +42,6 @@ html {
 .buttons button {
     width: 10rem;
     height: 4rem;
-    background-color: #fff;
     font-size: 2rem;
     color: #f03535;
     border: none;
@@ -51,6 +50,23 @@ html {
     box-shadow: 0.3rem 0.3rem 0.8rem #eee;
     margin: 1rem 0;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signin-btn {
+    background-color: #e7e7e7;
+}
+
+.change .signin-btn {
+    background-color: #fff;
+}
+
+.signup-btn {
+    background-color: #fff;
+}
+
+.change .signup-btn {
+    background-color: #e7e7e7;
 }
 
 .form-bg {
