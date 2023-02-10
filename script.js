@@ -21,6 +21,14 @@ const success = (input) => {
 
 }
 
+const clearForm = () => {
+    document.querySelectorAll('.form-input-wrapper').forEach((item) => {
+        item.className = 'form-input-wrapper'
+    })
+
+    form.reset()
+}
+
 const checkrequiredFields = (inputArray) => {
     inputArray.forEach((input)=>{
         if(input.value.trim() === ""){
@@ -46,6 +54,7 @@ document.querySelector('.signup-btn').addEventListener('click', ()=>{
         headingSpan2.textContent = 'Up'
     }, 200)
     form.className = 'form sign-up'
+    clearForm()
     
 })
 
@@ -55,6 +64,7 @@ document.querySelector('.signin-btn').addEventListener('click', ()=> {
         headingSpan2.textContent = 'In'
     },200)
     form.className = 'form sign-in'
+    clearForm()
         
 })
 
