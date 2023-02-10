@@ -18,9 +18,13 @@ const error = (input, message) => {
 const checkrequiredFields = (inputArray) => {
     inputArray.forEach((input)=>{
         if(input.value.trim() === ""){
-            // Display error message
-            error(input, `${input.id} is required`)
-
+             // Display error message
+            if(input.id === 'password2') {
+                error(input, 'Password confirmation is required')
+            } else {
+                error(input, `${input.id} is required`)
+            }
+                       
         } else {
             // Display border success green
         }
