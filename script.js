@@ -39,6 +39,12 @@ const checkLength = (input, min, max) => {
     )
 }
 
+const passwordsMatch = (input1, input2) => {
+    if(input1.value !== input2.value) {
+        error(input2, 'Passwords do not match')
+    }
+}
+
 const checkrequiredFields = (inputArray) => {
     inputArray.forEach((input)=>{
         if(input.value.trim() === ""){
@@ -85,6 +91,7 @@ form.addEventListener('submit', (e) => {
         checkrequiredFields([username, email, password, password2])
         checkLength(username, 2, 15)
         checkLength(password, 5, 25)
+        passwordsMatch(password, password2)
     } else {
         checkrequiredFields([email, password])
     }
