@@ -29,6 +29,16 @@ const clearForm = () => {
     form.reset()
 }
 
+const checkLength = (input, min, max) => {
+    if(input.value.length < min) {
+        error(input, `${input.id} must be at least ${min} characters`)
+    } else if(input.value.length > max) {
+        error(input, `${input.id} must be less than ${max} characters`)
+    } else (
+        success(input)
+    )
+}
+
 const checkrequiredFields = (inputArray) => {
     inputArray.forEach((input)=>{
         if(input.value.trim() === ""){
@@ -73,6 +83,8 @@ form.addEventListener('submit', (e) => {
 
     if(form.classList[1] === 'sign-up') {
         checkrequiredFields([username, email, password, password2])
+        checkLength(username, 2, 15)
+        checkLength(password, 5, 25)
     } else {
         checkrequiredFields([email, password])
     }
