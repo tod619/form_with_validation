@@ -45,6 +45,17 @@ const passwordsMatch = (input1, input2) => {
     }
 }
 
+const checkEmail = (input) => {
+    const regEx =
+  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+
+  if(regEx.test(input.value.trim())) {
+    success(input)
+  } else {
+    error(input, 'Email is not valid')
+  }
+}
+
 const checkrequiredFields = (inputArray) => {
     inputArray.forEach((input)=>{
         if(input.value.trim() === ""){
@@ -95,5 +106,7 @@ form.addEventListener('submit', (e) => {
     } else {
         checkrequiredFields([email, password])
     }
+
+    checkEmail(email)
     
 })
