@@ -15,6 +15,12 @@ const error = (input, message) => {
     inputWrapper.querySelector('.message').textContent = message 
 }
 
+const success = (input) => {
+    const inputWrapper = input.parentElement
+    inputWrapper.className = 'form-input-wrapper success'
+
+}
+
 const checkrequiredFields = (inputArray) => {
     inputArray.forEach((input)=>{
         if(input.value.trim() === ""){
@@ -27,6 +33,7 @@ const checkrequiredFields = (inputArray) => {
                        
         } else {
             // Display border success green
+            success(input)
         }
     })
 }

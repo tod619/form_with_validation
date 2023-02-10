@@ -166,6 +166,10 @@ html {
     opacity: 1;
 }
 
+.success .form-input {
+    border: 0.1rem solid #46e75b;
+}
+
 .form-btn {
     box-shadow: 0.5rem 0.5rem 1rem #ddd;
     color: #f03535;
