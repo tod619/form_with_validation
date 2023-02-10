@@ -1,5 +1,31 @@
 const container = document.querySelector('.container')
 const headingSpan2 = document.querySelector('.heading-span-2')
+const form = document.querySelector('form')
+
+
+// Input elements variables
+const username = document.getElementById('username')
+const email = document.getElementById('email')
+const password = document.getElementById('password')
+const password2 = document.getElementById('password2')
+
+const error = (input, message) => {
+    const inputWrapper = input.parentElement
+    inputWrapper.className = 'form-input-wrapper error'
+    inputWrapper.querySelector('.message').textContent = message 
+}
+
+const checkrequiredFields = (inputArray) => {
+    inputArray.forEach((input)=>{
+        if(input.value.trim() === ""){
+            // Display error message
+            error(input, `${input.id} is required`)
+
+        } else {
+            // Display border success green
+        }
+    })
+}
 
 
 document.querySelector('.signup-btn').addEventListener('click', ()=>{
@@ -17,4 +43,9 @@ document.querySelector('.signin-btn').addEventListener('click', ()=> {
         headingSpan2.textContent = 'In'
     },200)
         
+})
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    checkrequiredFields([username, email, password, password2])
 })
