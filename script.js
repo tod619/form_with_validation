@@ -45,6 +45,7 @@ document.querySelector('.signup-btn').addEventListener('click', ()=>{
     setTimeout(()=>{
         headingSpan2.textContent = 'Up'
     }, 200)
+    form.className = 'form sign-up'
     
 })
 
@@ -53,10 +54,17 @@ document.querySelector('.signin-btn').addEventListener('click', ()=> {
     setTimeout(()=>{
         headingSpan2.textContent = 'In'
     },200)
+    form.className = 'form sign-in'
         
 })
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    checkrequiredFields([username, email, password, password2])
+
+    if(form.classList[1] === 'sign-up') {
+        checkrequiredFields([username, email, password, password2])
+    } else {
+        checkrequiredFields([email, password])
+    }
+    
 })
